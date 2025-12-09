@@ -1,0 +1,196 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #0f0f0f;
+  color: #eee;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(20,20,20,0.8);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 1s ease;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.logo span {
+  /* Tricolor gradient */
+  background-image:
+    linear-gradient(to bottom, #FF9933 20% 53%, #FFFFFF 0% 47%, #138808 67% 100%);
+
+  /* Clip the background to the text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  /* Optional: add subtle stroke to improve readability on dark bg */
+  -webkit-text-stroke: 1px rgba(0,0,0,0.2);
+
+  
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+.nav-links li {
+  margin-left: 1.5rem;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+.nav-links a:hover {
+  color: #ff4081;
+  transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #ff4081, #ff7e5f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+.hero h1 {
+  font-size: 3rem;
+  animation: fadeInUp 2s ease;
+}
+.hero p {
+  margin-top: 1rem;
+  animation: fadeInUp 2.5s ease;
+}
+.btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  background: #fff;
+  color: #111;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.btn:hover {
+  background: #ff4081;
+  color: #fff;
+  box-shadow: 0 0 20px #ff4081;
+  transform: translateY(-5px);
+}
+
+/* Services */
+.services {
+  padding: 4rem 2rem;
+  background: #111;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #ff4081;
+  animation: fadeIn 2s ease;
+}
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.5s, box-shadow 0.5s;
+  animation: zoomIn 1.5s ease;
+}
+.card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(255,64,129,0.5);
+}
+
+/* About */
+.about {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+  color: #fff;
+  animation: fadeInUp 2s ease;
+}
+
+/* Contact */
+.contact {
+  padding: 4rem 2rem;
+  background: #111;
+  text-align: center;
+}
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInUp 2s ease;
+}
+.contact input, .contact textarea {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+.contact input::placeholder, .contact textarea::placeholder {
+  color: #bbb;
+}
+.contact button {
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  background: #0f0f0f;
+  color: #fff;
+  text-align: center;
+  padding: 4rem;
+  animation: fadein 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
